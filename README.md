@@ -12,7 +12,7 @@
 
 **FastMCP 3.1+ Model Context Protocol (MCP) server & SOTA React webapp dashboard for Substack newsletters.**
 
-[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Features](#-features) • [Sub-Packages](#-sub-package-documentation) • [Documentation](docs/README.md)
+[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Dual Capabilities](#-dual-capabilities-searchread--draftpublish) • [Onboarding](#-built-in-onboarding--help) • [Documentation](docs/README.md)
 
 ---
 
@@ -37,13 +37,31 @@
 +---------+     +------------------+           +-------------------+    +-------------------+
 ```
 
-### Key Concepts
-
-- **Publications**: Hosted on subdomains (e.g. `https://thepsf.substack.com`) or custom domains, providing public RSS feeds (`/feed`).
-- **Free & Paid Subscriptions**: Creators offer free articles alongside paid subscriber-only posts protected by paywalls (`<!-- paywall -->`).
-- **Community & Notes**: Direct post comments and short-form Notes foster an active reader ecosystem.
-
 > 📖 **Want a deep dive?** Read our complete [Substack Primer Guide](docs/SUBSTACK_PRIMER.md) covering Substack's history, platform architecture, RSS endpoints, and monetization strategies.
+
+---
+
+## ⚡ Dual Capabilities: Search/Read & Draft/Publish
+
+`substack-mcp` is designed for **both** readers/researchers and creators/publishers:
+
+| Workflow Mode | Auth Required? | Capabilities & Features |
+|---|---|---|
+| 🔍 **Search & Read** *(Public Mode)* | **No Login Needed** | • Ingest RSS feeds from any Substack newsletter domain<br>• Full-text offline article search in local SQLite<br>• Reader pane & audio/podcast details<br>• Star & bookmark favorite articles |
+| ✍️ **Draft & Publish** *(Author Mode)* | **Requires `substack.sid` Cookie** | • Stage, edit, and update Substack post drafts<br>• Convert Markdown to Substack HTML with paywalls (`<!-- paywall -->`)<br>• Local AI Writing Assistant (Ollama, LM Studio)<br>• Subscriber growth metrics, view counts, & open rates<br>• Post comment browsing & reply staging |
+
+---
+
+## 🚀 Built-in Onboarding & Help
+
+To get you up and running in minutes, `substack-mcp` includes interactive onboarding directly inside the webapp and in the documentation:
+
+- 📱 **Interactive Webapp Dashboard (`http://127.0.0.1:11164`)**:
+  - **Onboarding Tab**: Step-by-step setup wizard.
+  - **Help & System Diagnostics Tab**: Live health check cards for API Backend (`:11163`), SQLite DB, Substack Cookie Auth, and Local LLMs.
+  - **Cookie Extractor Tutorial**: Visual guide to copy your `substack.sid` session cookie from Browser DevTools (`F12`) into Settings.
+  - **MCP Client Integration Snippets**: One-click endpoints for Google Antigravity, Claude Desktop, and Cursor.
+- 📚 **Repo Guides**: See [`INSTALL.md`](INSTALL.md) and [`docs/ONBOARDING.md`](docs/ONBOARDING.md).
 
 ---
 
@@ -53,7 +71,7 @@
 - **Draft Studio & Markdown Converter**: Write posts in Markdown with paywall dividers (`<!-- paywall -->`) and preview rendered HTML.
 - **Local AI Writing Assistant**: Chat with your local LLM (Ollama, LM Studio, vLLM) to outline issues, polish tone, and brainstorm headlines.
 - **Favorites & Bookmarks**: Star articles directly in the reader and manage a saved collection.
-- **10-Tab Webapp Dashboard**: Clean SPA interface with real-time logs, tools inspector, analytics charts, and diagnostic cards.
+- **11-Tab Webapp Dashboard**: Clean SPA interface with real-time logs, tools inspector, analytics charts, and diagnostic cards.
 - **Dual-Transport MCP Server**: Connect AI agents (Antigravity, Claude, Cursor) via FastMCP Streamable HTTP (`/mcp`) or Stdio.
 
 ---
@@ -95,8 +113,6 @@ http://127.0.0.1:11163/mcp
 ---
 
 ## 📁 Sub-Package Documentation
-
-To explore specific modules within `substack-mcp`, see our targeted sub-readmes:
 
 - 📖 **[Substack Primer Guide (`docs/SUBSTACK_PRIMER.md`)](docs/SUBSTACK_PRIMER.md)** — What Substack is, platform structure, history, and ecosystem.
 - 🎨 **[Webapp Dashboard (`webapp/`)](webapp/README.md)** — Vite, React, Tailwind CSS, and Biome setup.
