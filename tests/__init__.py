@@ -1,0 +1,1 @@
+"""Substack MCP test suite."""
