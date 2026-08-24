@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-python:
-    name: Python Lint & Test
+    name: Python Lint, Typecheck & Test
     runs-on: ubuntu-latest
 
     steps:
@@ -30,11 +30,14 @@ jobs:
       - name: Lint with Ruff
         run: uv run ruff check .
 
-      - name: Run tests
+      - name: Typecheck with Pyright
+        run: uv run pyright
+
+      - name: Run Pytest Suite
         run: uv run pytest
 
   build-webapp:
-    name: Webapp Build
+    name: Webapp Lint & Build
     runs-on: ubuntu-latest
 
     steps:
@@ -47,8 +50,17 @@ jobs:
           cache: "npm"
           cache-dependency-path: "webapp/package-lock.json"
 
-      - name: Install dependencies & Build
+      - name: Install dependencies
         run: |
           cd webapp
           npm ci || npm install
+
+      - name: Lint with Biome
+        run: |
+          cd webapp
+          npm run lint
+
+      - name: Build Webapp with Vite
+        run: |
+          cd webapp
           npm run build

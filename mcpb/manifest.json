@@ -1,0 +1,39 @@
+{
+  "manifest_version": "0.2",
+  "name": "substack-mcp",
+  "version": "0.1.0",
+  "description": "FastMCP 3.1+ server and webapp dashboard for Substack feeds, drafting, stats, and community",
+  "author": {
+    "name": "Sandra Schieder"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "substack_mcp/server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--directory", "${PWD}", "python", "-m", "substack_mcp.server"],
+      "env": {
+        "PYTHONPATH": "${PWD}",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "substack_feed",
+      "description": "Portmanteau tool for reading, querying, and fetching Substack RSS feeds and articles."
+    },
+    {
+      "name": "substack_drafts",
+      "description": "Portmanteau tool for managing Substack drafts and converting Markdown text to Substack HTML."
+    },
+    {
+      "name": "substack_stats",
+      "description": "Portmanteau tool for tracking Substack publication analytics and subscriber metrics."
+    },
+    {
+      "name": "substack_community",
+      "description": "Portmanteau tool for community interactions, article comments, and discussion threads."
+    }
+  ]
+}

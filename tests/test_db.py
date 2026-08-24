@@ -37,6 +37,7 @@ def test_draft_crud():
     assert draft["title"] == "Test Post"
 
     updated = db.update_draft(draft["id"], title="Updated Title", subtitle="Subhead", content="Body text", status="ready")
+    assert updated is not None
     assert updated["title"] == "Updated Title"
     assert updated["status"] == "ready"
 

@@ -1,0 +1,14 @@
+{
+  "include": ["substack_mcp", "tests", "scripts"],
+  "exclude": ["**/node_modules", "**/__pycache__", ".venv"],
+  "pythonVersion": "3.11",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "none",
+  "reportMissingTypeStubs": "none",
+  "reportImportCycles": "error",
+  "reportUnusedImport": "warning",
+  "reportUnusedClass": "warning",
+  "reportUnusedFunction": "warning",
+  "reportUnusedVariable": "warning",
+  "reportDuplicateImport": "warning"
+}

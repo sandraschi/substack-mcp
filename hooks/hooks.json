@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "text",
+            "text": "## Session Context (Substack MCP)\n\nYou can ingest RSS feeds, stage Markdown posts, track analytics, and use local LLMs for newsletter writing.\n\n**Quick Verification:**\n- Run full quality suite: `just check`\n- Launch dev servers: `.\\start.ps1`\n- Launch webapp dashboard: `http://127.0.0.1:11164`\n- FastMCP Streamable HTTP Endpoint: `http://127.0.0.1:11163/mcp`"
+          }
+        ]
+      }
+    ]
+  }
+}
