@@ -12,13 +12,42 @@
 
 **FastMCP 3.1+ Model Context Protocol (MCP) server & SOTA React webapp dashboard for Substack newsletters.**
 
-[Quick Start](#-quick-start) • [Features](#-features) • [Sub-Packages](#-sub-package-documentation) • [Documentation](docs/README.md) • [Contributing](docs/DEVELOPMENT.md)
+[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Features](#-features) • [Sub-Packages](#-sub-package-documentation) • [Documentation](docs/README.md)
 
 ---
 
 </div>
 
-## 🌟 Highlights
+## 🧠 What is Substack?
+
+**[Substack](https://substack.com)** is an independent publishing platform and creator network founded in 2017. It allows writers, journalists, researchers, podcasters, and thinkers to publish long-form newsletters directly to their readers' email inboxes and the web.
+
+```
++-----------------------------------------------------------------------------------+
+|                              Substack Publication                                 |
++----------------------------------------+------------------------------------------+
+                                         |
+     +-------------------+---------------+---------------+--------------------+
+     |                   |                               |                    |
+     v                   v                               v                    v
++---------+     +------------------+           +-------------------+    +-------------------+
+|  Posts  |     | Substack Notes   |           |  Substack Chat    |    | Subscriber Tiers  |
+| (Email  |     | (Short-form      |           | (Community        |    | (Free, Monthly,   |
+| + Web)  |     |  Social Feed)    |           |  Messaging)       |    |  Annual, Founder) |
++---------+     +------------------+           +-------------------+    +-------------------+
+```
+
+### Key Concepts
+
+- **Publications**: Hosted on subdomains (e.g. `https://thepsf.substack.com`) or custom domains, providing public RSS feeds (`/feed`).
+- **Free & Paid Subscriptions**: Creators offer free articles alongside paid subscriber-only posts protected by paywalls (`<!-- paywall -->`).
+- **Community & Notes**: Direct post comments and short-form Notes foster an active reader ecosystem.
+
+> 📖 **Want a deep dive?** Read our complete [Substack Primer Guide](docs/SUBSTACK_PRIMER.md) covering Substack's history, platform architecture, RSS endpoints, and monetization strategies.
+
+---
+
+## 🌟 Features
 
 - **RSS & Newsletter Ingestion**: Ingest, parse, and search articles across any Substack newsletter with offline SQLite storage.
 - **Draft Studio & Markdown Converter**: Write posts in Markdown with paywall dividers (`<!-- paywall -->`) and preview rendered HTML.
@@ -69,6 +98,7 @@ http://127.0.0.1:11163/mcp
 
 To explore specific modules within `substack-mcp`, see our targeted sub-readmes:
 
+- 📖 **[Substack Primer Guide (`docs/SUBSTACK_PRIMER.md`)](docs/SUBSTACK_PRIMER.md)** — What Substack is, platform structure, history, and ecosystem.
 - 🎨 **[Webapp Dashboard (`webapp/`)](webapp/README.md)** — Vite, React, Tailwind CSS, and Biome setup.
 - ⚙️ **[Backend Package (`substack_mcp/`)](substack_mcp/README.md)** — FastAPI, FastMCP 3.1+, Local LLM engine, and SQLite database.
 - 🧪 **[Test Suite (`tests/`)](tests/README.md)** — Pytest unit test specifications and coverage.

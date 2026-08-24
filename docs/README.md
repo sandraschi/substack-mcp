@@ -4,6 +4,7 @@ Welcome to the documentation suite for `substack-mcp`.
 
 ## Documentation Sections
 
+- **[SUBSTACK_PRIMER.md](SUBSTACK_PRIMER.md)**: What Substack is, platform architecture, creator ecosystem, RSS feeds, and history.
 - **[ONBOARDING.md](ONBOARDING.md)**: Getting started, extracting `substack.sid` cookies, connecting MCP clients.
 - **[CONFIGURATION.md](CONFIGURATION.md)**: Settings reference, environment variables, Local LLM setup.
 - **[TOOLS.md](TOOLS.md)**: Exhaustive schema and parameter reference for FastMCP tools.
