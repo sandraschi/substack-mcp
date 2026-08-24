@@ -1,0 +1,32 @@
+{
+  "name": "substack-mcp",
+  "version": "0.1.0",
+  "description": "FastMCP 3.1+ server and React webapp dashboard for Substack feeds, drafting, stats, and community",
+  "author": "sandraschi",
+  "license": "MIT",
+  "homepage": "https://github.com/sandraschi/substack-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandraschi/substack-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "fastmcp",
+    "substack",
+    "rss",
+    "newsletter",
+    "markdown",
+    "ollama",
+    "local-llm"
+  ],
+  "server": {
+    "entrypoint": "substack_mcp.server:main",
+    "transport": "http",
+    "port": 11163,
+    "path": "/mcp"
+  },
+  "webapp": {
+    "port": 11164,
+    "framework": "vite-react"
+  }
+}

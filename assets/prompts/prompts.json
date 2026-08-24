@@ -1,0 +1,24 @@
+[
+  {
+    "name": "substack_draft_post",
+    "description": "Draft a new Substack newsletter post in Markdown with paywall dividers",
+    "arguments": [
+      {
+        "name": "topic",
+        "description": "Topic or title of the post",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "substack_summarize_feed",
+    "description": "Fetch and summarize recent articles from a Substack publication",
+    "arguments": [
+      {
+        "name": "publication",
+        "description": "Substack publication domain or name",
+        "required": true
+      }
+    ]
+  }
+]

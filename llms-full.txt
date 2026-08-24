@@ -1,0 +1,42 @@
+# Substack MCP — Full System Specification & Tool Reference
+
+`substack-mcp` is a Model Context Protocol (MCP) server and Vite React webapp dashboard for Substack publications.
+
+## FastMCP Tools Specification
+
+### 1. `substack_feed`
+- **Description**: Portmanteau tool for reading, searching, and ingesting Substack RSS feeds.
+- **Parameters**:
+  - `operation`: `'fetch' | 'list_publications' | 'query' | 'get_article'` (required)
+  - `publication`: Substack publication domain or name (e.g. `'thepsf'`)
+  - `search`: Search query string for filtering titles, summaries, or contents
+  - `article_guid`: Article unique identifier
+  - `limit`: Maximum results (default `20`)
+
+### 2. `substack_drafts`
+- **Description**: Portmanteau tool for managing Substack drafts and converting Markdown text into Substack HTML.
+- **Parameters**:
+  - `operation`: `'create' | 'list' | 'get' | 'update' | 'delete' | 'convert_markdown'` (required)
+  - `draft_id`: Draft ID integer
+  - `title`: Post title string
+  - `subtitle`: Subtitle string
+  - `content`: Markdown or HTML post content
+  - `publication`: Target publication domain
+  - `status`: `'draft' | 'ready' | 'published'`
+
+### 3. `substack_stats`
+- **Description**: Portmanteau tool for tracking Substack publication analytics.
+- **Parameters**:
+  - `operation`: `'record' | 'get' | 'summary'` (required)
+  - `publication`: Target publication domain
+  - `subscribers`: Total subscriber count integer
+  - `views`: Post views integer
+  - `open_rate`: Email open rate percentage float
+
+### 4. `substack_community`
+- **Description**: Portmanteau tool for community interactions e.g. post comments and discussion threads.
+- **Parameters**:
+  - `operation`: `'get_comments' | 'post_comment'` (required)
+  - `publication`: Target publication domain
+  - `article_link`: Article URL string
+  - `comment_text`: Comment text string

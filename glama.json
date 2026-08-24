@@ -1,0 +1,24 @@
+{
+  "$schema": "https://glama.ai/mcp/schema.json",
+  "name": "substack-mcp",
+  "description": "FastMCP 3.1+ server and webapp dashboard for Substack feeds, drafting, stats, and community",
+  "repository": "https://github.com/sandraschi/substack-mcp",
+  "tools": [
+    {
+      "name": "substack_feed",
+      "description": "Portmanteau tool for reading, querying, and fetching Substack RSS feeds and articles."
+    },
+    {
+      "name": "substack_drafts",
+      "description": "Portmanteau tool for managing Substack drafts and converting Markdown text to Substack HTML."
+    },
+    {
+      "name": "substack_stats",
+      "description": "Portmanteau tool for tracking Substack publication analytics and subscriber metrics."
+    },
+    {
+      "name": "substack_community",
+      "description": "Portmanteau tool for community interactions, article comments, and discussion threads."
+    }
+  ]
+}

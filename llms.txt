@@ -1,0 +1,18 @@
+# Substack MCP
+
+> FastMCP 3.1+ server and React webapp dashboard for Substack feeds, drafting, stats, and community.
+
+- Repository: https://github.com/sandraschi/substack-mcp
+- Backend Port: 11163 (FastAPI + FastMCP HTTP `/mcp`)
+- Webapp Port: 11164 (Vite React SPA)
+
+## Tools Overview
+
+- `substack_feed`: Ingest RSS feeds, list tracked publications, query cached articles.
+- `substack_drafts`: Create, edit, list, delete, and convert Markdown drafts into Substack HTML.
+- `substack_stats`: Record snapshot metrics, retrieve analytics history.
+- `substack_community`: Fetch comments and post discussion replies.
+
+## Usage
+
+Connect via FastMCP HTTP transport at `http://127.0.0.1:11163/mcp`.
