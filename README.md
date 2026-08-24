@@ -2,23 +2,23 @@
 
 # 📰 Substack MCP (`substack-mcp`)
 
-[![CI](https://github.com/sandraschi/substack-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sandraschi/substack-mcp/actions/workflows/ci.yml)
-![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)
-![FastMCP Version](https://img.shields.io/badge/FastMCP-3.1%2B-orange.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB.svg?logo=react)
-![Vite](https://img.shields.io/badge/Vite-646CFF.svg?logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC.svg?logo=tailwind-css&logoColor=white)
-![just](https://img.shields.io/badge/task%20runner-just-000000.svg)
-![Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg?logo=ruff)
-![Biome](https://img.shields.io/badge/linter-biome-60a5fa.svg)
-![Pyright](https://img.shields.io/badge/types-pyright-blue.svg)
-![Tauri](https://img.shields.io/badge/Tauri-v2-FFC107.svg?logo=tauri)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/sandraschi/substack-mcp/ci.yml?branch=master&label=CI&style=flat-square)](https://github.com/sandraschi/substack-mcp/actions)
+[![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg?style=flat-square)](https://www.python.org/)
+[![FastMCP Version](https://img.shields.io/badge/FastMCP-3.1%2B-orange.svg?style=flat-square)](https://github.com/jlowin/fastmcp)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-18-61DAFB.svg?style=flat-square&logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC.svg?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![just](https://img.shields.io/badge/task%20runner-just-000000.svg?style=flat-square)](https://github.com/casey/just)
+[![Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg?style=flat-square&logo=ruff)](https://docs.astral.sh/ruff/)
+[![Biome](https://img.shields.io/badge/linter-biome-60a5fa.svg?style=flat-square)](https://biomejs.dev/)
+[![Pyright](https://img.shields.io/badge/types-pyright-blue.svg?style=flat-square)](https://microsoft.github.io/pyright/)
+[![Tauri](https://img.shields.io/badge/Tauri-v2-FFC107.svg?style=flat-square&logo=tauri)](https://tauri.app/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](LICENSE)
 
 **FastMCP 3.1+ Model Context Protocol (MCP) server & SOTA React webapp dashboard for Substack newsletters.**
 
-[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Dual Capabilities](#-dual-capabilities-searchread--draftpublish) • [Onboarding](#-built-in-onboarding--help) • [Just Commands](#-just-task-runner) • [Documentation](docs/README.md)
+[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Dual Capabilities](#-dual-capabilities-searchread--draftpublish) • [Onboarding](#-built-in-onboarding--help) • [Just Commands](#-just-task-runner-commands) • [Documentation](docs/README.md)
 
 ---
 
