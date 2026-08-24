@@ -5,19 +5,20 @@
 [![CI](https://github.com/sandraschi/substack-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sandraschi/substack-mcp/actions/workflows/ci.yml)
 ![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)
 ![FastMCP Version](https://img.shields.io/badge/FastMCP-3.1%2B-orange.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB.svg?logo=react)
+![Vite](https://img.shields.io/badge/Vite-646CFF.svg?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC.svg?logo=tailwind-css&logoColor=white)
+![just](https://img.shields.io/badge/task%20runner-just-000000.svg)
 ![Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg?logo=ruff)
 ![Biome](https://img.shields.io/badge/linter-biome-60a5fa.svg)
 ![Pyright](https://img.shields.io/badge/types-pyright-blue.svg)
 ![Tauri](https://img.shields.io/badge/Tauri-v2-FFC107.svg?logo=tauri)
-![Local LLM](https://img.shields.io/badge/Local%20LLM-Ollama%20%7C%20LM%20Studio-emerald.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Backend Port](https://img.shields.io/badge/backend-11163-purple.svg)
-![Webapp Port](https://img.shields.io/badge/webapp-11164-emerald.svg)
 
 **FastMCP 3.1+ Model Context Protocol (MCP) server & SOTA React webapp dashboard for Substack newsletters.**
 
-[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Dual Capabilities](#-dual-capabilities-searchread--draftpublish) • [Onboarding](#-built-in-onboarding--help) • [Documentation](docs/README.md)
+[Quick Start](#-quick-start) • [What is Substack?](#-what-is-substack) • [Dual Capabilities](#-dual-capabilities-searchread--draftpublish) • [Onboarding](#-built-in-onboarding--help) • [Just Commands](#-just-task-runner) • [Documentation](docs/README.md)
 
 ---
 
@@ -70,14 +71,38 @@ To get you up and running in minutes, `substack-mcp` includes interactive onboar
 
 ---
 
-## 🌟 Features
+## ⚙️ `just` Task Runner Commands
 
-- **RSS & Newsletter Ingestion**: Ingest, parse, and search articles across any Substack newsletter with offline SQLite storage.
-- **Draft Studio & Markdown Converter**: Write posts in Markdown with paywall dividers (`<!-- paywall -->`) and preview rendered HTML.
-- **Local AI Writing Assistant**: Chat with your local LLM (Ollama, LM Studio, vLLM) to outline issues, polish tone, and brainstorm headlines.
-- **Favorites & Bookmarks**: Star articles directly in the reader and manage a saved collection.
-- **11-Tab Webapp Dashboard**: Clean SPA interface with real-time logs, tools inspector, analytics charts, and diagnostic cards.
-- **Dual-Transport MCP Server**: Connect AI agents (Antigravity, Claude, Cursor) via FastMCP Streamable HTTP (`/mcp`) or Stdio.
+All common tasks are defined in the repository [`justfile`](justfile):
+
+```bash
+# Run full quality check (lint + typecheck + pytest)
+just check
+
+# Run Python Pytest test suite
+just test
+
+# Lint backend (ruff) and webapp (biome)
+just lint
+
+# Format code (ruff format & biome format)
+just format
+
+# Static typecheck (pyright & tsc)
+just typecheck
+
+# Start unified dev servers (clears zombie ports, starts backend & webapp, opens browser)
+just start
+
+# Pack .mcpb desktop package
+just mcpb-pack
+
+# Build Tauri NSIS Windows installer
+just tauri-build
+
+# Run headless CUA smoke test
+just cua-smoke
+```
 
 ---
 
@@ -90,8 +115,9 @@ To get you up and running in minutes, `substack-mcp` includes interactive onboar
 git clone https://github.com/sandraschi/substack-mcp.git
 cd substack-mcp
 
-# Launch backend (11163) and dashboard (11164)
-.\start.ps1
+# Launch backend (11163) and dashboard (11164) via just or PowerShell script
+just start
+# or: .\start.ps1
 ```
 
 The webapp dashboard will automatically open in your default browser at `http://127.0.0.1:11164`.
