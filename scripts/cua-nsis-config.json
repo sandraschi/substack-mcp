@@ -1,0 +1,62 @@
+{
+  "product_name": "Substack MCP",
+  "install_dir": "%LOCALAPPDATA%\\Substack MCP",
+  "operator_exe": "substack-mcp-native.exe",
+  "backend_process_names": [
+    "substack-mcp-native",
+    "substack-mcp-backend"
+  ],
+  "backend_port": 11163,
+  "health_path": "/health",
+  "diagnostics_path": "/api/v1/diagnostics",
+  "feature_smoke_path": "/api/v1/system/info",
+  "window_title_re": "Substack MCP",
+  "nsis_glob": "src-tauri/target/release/bundle/nsis/Substack MCP_*_x64-setup.exe",
+  "bridge_ok_text": "REST bridge reachable",
+  "uninstall_registry_filter": "*Substack MCP*",
+  "frontend_port": 11164,
+  "nav_routes": [
+    [
+      "Dashboard",
+      "Dashboard"
+    ],
+    [
+      "Reader",
+      "Reader"
+    ],
+    [
+      "Drafts",
+      "Drafts"
+    ],
+    [
+      "Analytics",
+      "Analytics"
+    ],
+    [
+      "Community",
+      "Community"
+    ],
+    [
+      "Tools",
+      "Tools"
+    ],
+    [
+      "Logs",
+      "Logs"
+    ],
+    [
+      "Settings",
+      "Settings"
+    ],
+    [
+      "Help",
+      "Help"
+    ]
+  ],
+  "sidebar_click_x": 30,
+  "sidebar_first_y": 90,
+  "sidebar_step_y": 55,
+  "connected_badge_text": "connected",
+  "backend_timeout": 30,
+  "frontend_timeout": 30
+}
