@@ -29,7 +29,7 @@ typecheck:
     cd webapp; npm run build
 
 mcpb-pack:
-    powershell -ExecutionPolicy Bypass -File .\scripts\mcpb-pack.ps1
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Dev\repos\mcp-central-docs\scripts\make-mcpb.ps1" -RepoPath "{{REPO}}"
 
 tauri-build:
     powershell -ExecutionPolicy Bypass -File .\src-tauri\build.ps1

@@ -37,3 +37,10 @@ ignore = ["E501"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+
+[dependency-groups]
+dev = [
+    "pillow>=12.3.0",
+    "pytesseract>=0.3.13",
+    "pywinauto>=0.6.9",
+]
