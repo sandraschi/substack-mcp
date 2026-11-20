@@ -112,7 +112,8 @@ app = FastAPI(title="Substack MCP API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["tauri://localhost", "https://tauri.localhost"],
+    allow_origin_regex=r"https?://(?:localhost|127\.0\.0\.1)(?::\d+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
